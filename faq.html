@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAQ | Savora</title>
+
+<meta name="description" content="Frequently Asked Questions">
+
+<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/faq.css">
+<link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <a href="/">SAVORA</a>
+</div>
+
+<nav>
+
+<a href="/">Home</a>
+<a href="/blackbox">BLACKBOX</a>
+<a href="/privacy.html">Privacy</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Frequently Asked Questions</h1>
+
+<p>
+Everything you need to know about Savora and BLACKBOX™
+</p>
+
+<input
+type="text"
+id="search"
+placeholder="Search questions...">
+
+</section>
+
+<section class="faq" id="faqContainer">
+
+<details>
+
+<summary>
+What is Savora?
+</summary>
+
+<p>
+
+Savora is a student loyalty platform that connects verified students with exclusive discounts and rewards from trusted businesses across Nigeria.
+
+</p>
+
+</details>
+
+<details>
+
+<summary>
+Who can access BLACKBOX™?
+</summary>
+
+<p>
+
+Sign up as a verified student, explore available deals, visit participating businesses, and enjoy exclusive student offers while earning rewards.
+
+</p>
+
+</details>
+
+<details>
+
+<summary>
+How do I become a partner?
+</summary>
+
+<p>
+
+Submit your application through the contact channels on Savora. Applications are reviewed before credentials are issued.
+
+</p>
+
+</details>
+
+<details>
+
+<summary>
+I forgot my partner credentials.
+</summary>
+
+<p>
+
+Contact Savora support for identity verification and credential recovery.
+
+</p>
+
+</details>
+
+<details>
+
+<summary>
+How secure is my information?
+</summary>
+
+<p>
+
+All sensitive communications are encrypted and protected through multiple security layers.
+
+</p>
+
+</details>
+
+<details>
+
+<summary>
+How long does approval take?
+</summary>
+
+<p>
+
+Most applications are reviewed within 24–72 hours.
+
+</p>
+
+</details>
+
+<details>
+
+<summary>
+How can I contact support?
+</summary>
+
+<p>
+
+Email:
+
+<strong>support@savora.ng</strong>
+
+</p>
+
+</details>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Savora. All rights reserved.
+
+</p>
+
+</footer>
+
+<script>
+
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",()=>{
+
+const filter=search.value.toLowerCase();
+
+document.querySelectorAll(".faq details").forEach(item=>{
+
+const text=item.innerText.toLowerCase();
+
+item.style.display=text.includes(filter)
+? "block"
+: "none";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

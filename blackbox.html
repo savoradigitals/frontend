@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BLACKBOX partner intelligence hub.">
+  <title>B L Λ C K B O X™</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+  <link rel="stylesheet" href="./css/blackbox.css">
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <script src="./js/blackbox.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <section id="partner-gate" aria-labelledby="gate-title">
+      <div class="lock-shell">
+        <div class="lock-screen">
+          <p class="gate-chip">Secure Partner Access</p>
+
+          <div class="cube-container" aria-hidden="true">
+            <div class="cube">
+              <div class="face front"></div>
+              <div class="face back"></div>
+              <div class="face right"></div>
+              <div class="face left"></div>
+              <div class="face top"></div>
+              <div class="face bottom"></div>
+            </div>
+          </div>
+
+          <h1 id="gate-title">B L Λ C K B O X™</h1>
+          <p class="sub-text">BLACKBOX V1.0</p>
+
+          <form class="auth-box" id="auth-form" novalidate>
+            <label class="sr-only" for="partner-pass">Enter Partner Key</label>
+            <input type="password" id="partner-pass" name="partner-pass" placeholder="Enter Partner Key" autocomplete="current-password">
+
+            <button type="submit" id="login-btn">Log In</button>
+
+            <label class="sr-only" for="partner-otp">Enter OTP</label>
+            <input type="text" id="partner-otp" name="partner-otp" placeholder="Enter OTP" autocomplete="one-time-code" inputmode="numeric" hidden>
+
+            <button type="button" id="otp-btn" hidden>Verify OTP</button>
+          </form>
+
+          <div id="loading" role="status" aria-live="polite"></div>
+          <p id="error-msg" role="alert" aria-live="assertive">Invalid key</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="hub-content" aria-labelledby="hub-heading" hidden>
+      <div class="partner-hub-container">
+        <header class="hub-header">
+          <div>
+            <h2 id="hub-heading" class="hub-title"><span class="cyan-text">B L Λ C K B O X</span> | <span id="partner-display-name">Partner</span></h2>
+            <p class="hub-subtitle">Private Partner Intelligence Hub</p>
+          </div>
+          <p class="live-badge">Live Sync Active</p>
+        </header>
+
+        <div class="stats-grid" aria-label="Partner analytics metrics">
+          <article class="stat-card cyan-accent">
+            <p class="label">Gross Turnover</p>
+            <h3 class="value">₦<span id="stat-turnover">0</span></h3>
+          </article>
+          <article class="stat-card gold-accent">
+            <p class="label gold-label">Network Utility Fee</p>
+            <h3 class="value">₦<span id="stat-fee">0</span></h3>
+          </article>
+          <article class="stat-card cyan-accent">
+            <p class="label">3HR Peak Window</p>
+            <h3 class="value value-small"><span id="stat-peak">N/A</span></h3>
+          </article>
+          <article class="stat-card cyan-accent">
+            <p class="label">Retention Rate</p>
+            <h3 class="value"><span id="stat-retention">0%</span></h3>
+          </article>
+          <article class="stat-card red-accent">
+            <p class="label red-label">Churn Rate (30D)</p>
+            <h3 class="value"><span id="stat-churn">0.0%</span></h3>
+          </article>
+          <article class="stat-card cyan-accent">
+            <p class="label">Scans (Today)</p>
+            <h3 class="value"><span id="stat-day">0</span></h3>
+          </article>
+          <article class="stat-card cyan-accent">
+            <p class="label">Monthly Scans</p>
+            <h3 class="value"><span id="stat-month-vol">0</span></h3>
+          </article>
+          <article class="stat-card cyan-accent rank-card">
+            <p class="label">Quality (Food or Service)</p>
+            <h3 class="value"><span id="stat-food">0.0</span><small>/5</small></h3>
+          </article>
+          <article class="stat-card cyan-accent rank-card">
+            <p class="label">Service Score</p>
+            <h3 class="value"><span id="stat-service">0.0</span><small>/5</small></h3>
+          </article>
+          <article class="stat-card cyan-accent rank-card">
+            <p class="label">Ambiance Score</p>
+            <h3 class="value"><span id="stat-ambiance">0.0</span><small>/5</small></h3>
+          </article>
+          <article class="stat-card cyan-accent">
+            <p class="label">Visit Frequency</p>
+            <h3 class="value"><span id="stat-freq">0.0</span><small>x</small></h3>
+          </article>
+          <article class="stat-card cyan-accent">
+            <p class="label">Market Share</p>
+            <h3 class="value"><span id="stat-share">0%</span></h3>
+          </article>
+          <article class="stat-card cyan-accent">
+            <p class="label">Student LTV</p>
+            <h3 class="value">₦<span id="stat-clv">0</span></h3>
+          </article>
+          <article class="stat-card cyan-accent">
+            <p class="label">Avg. Trans. Value</p>
+            <h3 class="value">₦<span id="stat-atv">0</span></h3>
+          </article>
+        </div>
+
+        <div class="hub-actions">
+          <button class="export-btn download-style" type="button" id="download-report-btn">Export Report</button>
+          <button class="export-btn" type="button" id="disconnect-btn">Disconnect</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

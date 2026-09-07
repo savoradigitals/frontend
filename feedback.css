@@ -1,0 +1,211 @@
+.feedback-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(52, 214, 232, 0.20), transparent 30%),
+    radial-gradient(circle at 86% 18%, rgba(30, 135, 216, 0.14), transparent 32%),
+    linear-gradient(135deg, #eef7fa 0%, #fbfdff 45%, #eaf5f8 100%);
+}
+
+.feedback-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 26px 18px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.feedback-page .app-header {
+  margin-bottom: 22px;
+}
+
+.feedback-page .brand-mark {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 12px;
+  border-radius: 20px;
+  font-size: 24px;
+}
+
+.feedback-page .app-header h1 {
+  font-size: 23px;
+  letter-spacing: 3px;
+}
+
+.rating-card {
+  position: relative;
+  overflow: hidden;
+  padding: 24px 18px 22px;
+  border: 1px solid rgba(52, 214, 232, 0.18);
+  border-radius: 24px;
+  color: var(--savora-ink);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.76));
+  box-shadow:
+    0 20px 46px rgba(5, 8, 18, 0.12),
+    0 0 28px rgba(52, 214, 232, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+.rating-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(52, 214, 232, 0.14), transparent 34%),
+    linear-gradient(135deg, rgba(52, 214, 232, 0.08), transparent 48%);
+  pointer-events: none;
+}
+
+.rating-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.feedback-page input {
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.rating-group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.metric-label {
+  display: block;
+  margin-bottom: 9px;
+  color: rgba(7, 17, 31, 0.52);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 36px;
+  color: rgba(7, 17, 31, 0.14);
+}
+
+.rating-group:last-of-type .stars {
+  margin-bottom: 6px;
+}
+
+.star-btn {
+  border: 0;
+  padding: 0;
+  line-height: 1;
+  color: rgba(7, 17, 31, 0.14);
+  background: transparent;
+  cursor: pointer;
+  font-size: inherit;
+  transition: transform 180ms ease, color 180ms ease, text-shadow 180ms ease;
+}
+
+.star-btn:active {
+  transform: scale(1.28);
+}
+
+.star-btn.selected {
+  color: var(--savora-cyan);
+  text-shadow: 0 0 14px rgba(52, 214, 232, 0.52);
+  transform: scale(1.1);
+}
+
+#status-msg {
+  display: none;
+  margin: 18px 0 0;
+  color: var(--savora-blue);
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+#success-screen {
+  display: none;
+  padding: 38px 24px;
+  border: 1px solid rgba(52, 214, 232, 0.24);
+  border-radius: 26px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(52, 214, 232, 0.38), transparent 34%),
+    radial-gradient(circle at 18% 80%, rgba(30, 135, 216, 0.18), transparent 34%),
+    linear-gradient(145deg, #041019, #06363f 48%, #050812);
+  box-shadow:
+    0 22px 52px rgba(5, 8, 18, 0.24),
+    0 0 34px rgba(52, 214, 232, 0.18);
+  animation: zoomIn 0.45s ease-out;
+}
+
+.feedback-page .success-icon {
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 18px;
+  border-radius: 24px;
+  font-size: 38px;
+  box-shadow:
+    0 0 32px rgba(52, 214, 232, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.20);
+}
+
+#success-screen h2 {
+  margin: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  font-size: 23px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.success-copy {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.new-entry-btn {
+  margin-top: 26px;
+  padding: 13px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  border-radius: 999px;
+  color: #041019;
+  background: linear-gradient(90deg, #fff, #dffaff);
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 420px) {
+  .feedback-container {
+    padding: 22px 16px;
+  }
+
+  .stars {
+    font-size: 32px;
+    gap: 6px;
+  }
+
+  .rating-card {
+    padding: 22px 16px 20px;
+  }
+}
